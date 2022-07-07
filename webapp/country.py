@@ -17,14 +17,10 @@ def run_app():
     title = "Inflation Targetting in " + country["country"].iloc[0]
     st.title(title)
 
-    metric1 = st.sidebar.selectbox(
-        'Select Metric 1',
-        ("Inflation", "Deviation"))
-    metric2 = st.sidebar.selectbox(
-        'Select Metric 2',
-        ("ToT", "VarToT"))
 
-    metric1 = metric1.lower()
+    metric2 = st.sidebar.selectbox(
+        'Select Metric',
+        ("ToT", "VarToT"))
 
     fig1, ax1 = plt.subplots(figsize=(12, 4))
 
