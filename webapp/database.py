@@ -16,4 +16,5 @@ def highlight_shock(number):
 def run_app():
 
     df = pd.read_csv("db.csv")
-    st.dataframe(df[['country','year','inflation','deviation','ToT','VarToT']].style.applymap(highlight_shock, subset = 'VarToT'))
+    df1 = df[df['year']>1999]
+    st.dataframe(df1[['country','year','inflation','deviation','ToT','VarToT']].style.applymap(highlight_shock, subset = 'VarToT'))
