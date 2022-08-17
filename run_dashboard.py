@@ -1,7 +1,7 @@
 from webapp import app
 import streamlit as st
 import sys
-from st import cli as stcli
+from streamlit import cli as stcli
 
 if __name__ == "__main__":
     if st._is_running_with_streamlit:
